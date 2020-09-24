@@ -1,4 +1,4 @@
-package com.hy.animandview;
+package com.hy.animandview.view;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
+import com.hy.animandview.App;
+import com.hy.animandview.R;
 import com.hy.animandview.listener.SimpleAnimatorListener;
 
 import androidx.annotation.Nullable;
