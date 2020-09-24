@@ -3,7 +3,7 @@ package com.hy.animandview;
 import android.os.Bundle;
 
 import com.hy.animandview.view.LVCircularSmile;
-import com.hy.animandview.view.LoadingLineView;
+import com.hy.animandview.view.LoadingFaceView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
  **/
 public class MainActivity extends AppCompatActivity {
 
-    private LoadingLineView mLoadingLineView;
+    private LoadingFaceView mLoadingFaceView;
 
     private LVCircularSmile mLVCircularSmile;
 
@@ -24,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.btn).setOnClickListener(view -> {
-//            if (mLoadingLineView != null) {
-//                mLoadingLineView.start();
-//            }
+            if (mLoadingFaceView != null) {
+                mLoadingFaceView.start();
+            }
 
             if (mLVCircularSmile != null) {
                 mLVCircularSmile.startAnim();
             }
         });
 
-        mLoadingLineView = findViewById(R.id.loading_line_view);
+        mLoadingFaceView = findViewById(R.id.loading_face_view);
         mLVCircularSmile = findViewById(R.id.loading_smile);
 
     }
