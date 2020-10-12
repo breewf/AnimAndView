@@ -1,5 +1,6 @@
 package com.hy.animandview;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.hy.animandview.view.LVCircularSmile;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_test1).setOnClickListener(view ->
+                startActivity(new Intent(this, TestActivity1.class)));
 
         findViewById(R.id.btn).setOnClickListener(view -> {
             if (mLoadingFaceView != null) {
