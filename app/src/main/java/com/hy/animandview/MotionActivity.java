@@ -6,8 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 
+import com.bumptech.glide.Glide;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.motion.widget.MotionLayout;
+import androidx.constraintlayout.utils.widget.ImageFilterView;
 
 /**
  * @author hy
@@ -21,6 +24,9 @@ public class MotionActivity extends AppCompatActivity {
     private MotionLayout mMotionLayout;
     private SeekBar mSeekBar;
 
+    private ImageFilterView mImageView;
+    private ImageFilterView mImageView2;
+
     private Button btnToStartScene;
     private Button btnToEndScene;
 
@@ -30,9 +36,18 @@ public class MotionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_motion);
 
         mMotionLayout = findViewById(R.id.motionLayout);
+        mImageView = findViewById(R.id.image);
+        mImageView2 = findViewById(R.id.image2);
         mSeekBar = findViewById(R.id.seekBar);
         btnToStartScene = findViewById(R.id.btnToStartScene);
         btnToEndScene = findViewById(R.id.btnToEndScene);
+
+//        Glide.with(this)
+//                .load("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=360089235,730433134&fm=26&gp=0.jpg")
+//                .into(mImageView);
+        Glide.with(this)
+                .load("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=141092993,2986552179&fm=26&gp=0.jpg")
+                .into(mImageView2);
 
         btnToStartScene.setOnClickListener(new View.OnClickListener() {
             @Override
