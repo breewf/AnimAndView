@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AnimAndView</string>
     <string name="title_activity_test1">TestActivity1</string>
+    <string name="title_activity_motion">MotionActivity</string>
 </resources>

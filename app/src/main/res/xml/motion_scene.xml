@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    app:motionInterpolator：过渡动画的插值器。共有以下 6 个可选值：-->
+<!--    linear：线性-->
+<!--    easeIn：缓入-->
+<!--    easeOut：缓出-->
+<!--    easeInOut：缓入缓出-->
+<!--    bounce：弹簧-->
+<!--    anticipate -->
+
+    <Transition
+        app:constraintSetStart="@layout/activity_motion_scene1"
+        app:constraintSetEnd="@layout/activity_motion_scene2"
+        app:duration="1000"
+        app:motionInterpolator="easeOut">
+
+<!--        app:clickAction：设置点击时执行的动作。该属性共有以下 5 个可选的值：-->
+<!--        toggle：在 Start 场景和 End 场景之间循环的切换。-->
+<!--        transitionToEnd：过渡到 End 场景。-->
+<!--        transitionToStart：过渡到 Start 场景。-->
+<!--        jumpToEnd：跳到 End 场景（不执行过渡动画）。-->
+<!--        jumpToStart：跳到 Start 场景（不执行过渡动画）。-->
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/image" />
+
+<!--        <OnSwipe> 元素的属性：-->
+<!--        app:touchAnchorId：【id 值】设置拖动操作要关联到的对象，让触摸操作看起来像是在拖动这个对象的由 app:touchAnchorSide 属性指定的那个边。-->
+<!--        app:touchAnchorSide：设置触摸操作将会拖动对象的哪一边，共有以下 4 个可选值：-->
+<!--        top-->
+<!--        left-->
+<!--        right-->
+<!--        bottom-->
+<!--        app:dragDirection：设置拖动的方向（注意，只有设置了 app:touchAnchorId 属性后该属性才有效）。共有以下 4 个可选值：-->
+<!--        dragUp：手指从下往上拖动（↑）。-->
+<!--        dragDown：手指从上往下拖动（↓）。-->
+<!--        dragLeft：手指从右往左拖动（←）。-->
+<!--        dragRight：手指从左往右拖动（→）。-->
+<!--        app:maxVelocity：【浮点值】设置动画在拖动时的最大速度（单位：像素每秒 px/s）。-->
+<!--        app:maxAcceleration：【浮点值】设置动画在拖动时的最大加速度（单位：像素每二次方秒 px/s^2）。-->
+<!--        可以同时设置 <OnClick> 与 <OnSwipe> ，或者都不设置，而是使用代码来触发过渡。-->
+
+    </Transition>
+
+</MotionScene>
