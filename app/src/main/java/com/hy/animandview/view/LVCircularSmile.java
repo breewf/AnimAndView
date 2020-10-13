@@ -54,8 +54,8 @@ public class LVCircularSmile extends View {
         } else {
             mWidth = getMeasuredWidth();
         }
-        mPadding = dip2px(10);
-        mEyeWidth = dip2px(3);
+        mPadding = dp2px(10);
+        mEyeWidth = dp2px(3);
     }
 
     @Override
@@ -86,7 +86,7 @@ public class LVCircularSmile extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(Color.GRAY);
-        mPaint.setStrokeWidth(dip2px(2));
+        mPaint.setStrokeWidth(dp2px(2));
     }
 
     /**
@@ -180,7 +180,7 @@ public class LVCircularSmile extends View {
         return 0;
     }
 
-    public int dip2px(float dpValue) {
+    public int dp2px(float dpValue) {
         final float scale = getContext().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }

@@ -48,7 +48,11 @@ public class DimpleView extends View {
 
     private float centerX, centerY;
 
+    private float mCircleRadius = 280f;
+
     private ValueAnimator mValueAnimator;
+
+    private boolean mPause = true;
 
     private ArrayList<Particle> mParticleList = new ArrayList<>();
 
@@ -67,6 +71,7 @@ public class DimpleView extends View {
 
     private void init(Context context) {
         mContext = context;
+        mCircleRadius = dp2px(100);
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -84,7 +89,7 @@ public class DimpleView extends View {
         centerX = ((float) w / 2);
         centerY = ((float) h / 2);
 
-        mPath.addCircle(centerX, centerY, 280f, Path.Direction.CCW);
+        mPath.addCircle(centerX, centerY, mCircleRadius, Path.Direction.CCW);
         // 添加path
         mPathMeasure.setPath(mPath, false);
 
@@ -117,7 +122,7 @@ public class DimpleView extends View {
             offSet = random.nextInt(200);
 
             // 反余弦函数可以得到角度值，是弧度
-            angle = Math.acos(((pos[0] - centerX) / 280f));
+            angle = Math.acos(((pos[0] - centerX) / mCircleRadius));
 
             // 速度
             speed = random.nextInt(2) + 1f;
@@ -145,6 +150,12 @@ public class DimpleView extends View {
     }
 
     public void start() {
+        if (mPause && mValueAnimator != null) {
+            mValueAnimator.start();
+            mPause = false;
+            return;
+        }
+
         reset();
 
         mValueAnimator = ValueAnimator.ofFloat(0f, 1f);
@@ -165,7 +176,21 @@ public class DimpleView extends View {
                 super.onAnimationEnd(animation);
             }
         });
+        mValueAnimator.setRepeatCount(ValueAnimator.INFINITE);
         mValueAnimator.start();
+        mPause = false;
+    }
+
+    public void pause() {
+        if (mValueAnimator == null) {
+            return;
+        }
+        mValueAnimator.pause();
+        mPause = true;
+    }
+
+    public boolean isPause() {
+        return mPause;
     }
 
     private void reset() {
@@ -179,36 +204,28 @@ public class DimpleView extends View {
         for (int i = 0; i < mParticleList.size(); i++) {
             Particle particle = mParticleList.get(i);
 
-//            if (particle.y - centerY > particle.maxOffset) {
-//                // 重新设置Y值
-//                particle.y = centerY;
-//                // 随机设置X值
-//                particle.x = new Random().nextInt((int) (centerX * 2));
-//                // 随机设置速度
-//                particle.speed = (new Random().nextInt(10) + 5);
-//            }
-
-            // 设置粒子的透明度
-//            particle.alpha = (int) ((1f - (particle.y - centerY) / particle.maxOffset) * 225f);
-//            particle.y += particle.speed;
-
             if (particle.offset > particle.maxOffset) {
                 particle.offset = 0;
                 particle.speed = new Random().nextInt(2) + 1f;
             }
 
             particle.alpha = (int) ((1f - particle.offset / particle.maxOffset) * 225f);
-            particle.x = (float) (centerX + Math.cos(particle.angle) * (280f + particle.offset));
+            particle.x = (float) (centerX + Math.cos(particle.angle) * (mCircleRadius + particle.offset));
             if (particle.y > centerY) {
-                particle.y = (float) (Math.sin(particle.angle) * (280f + particle.offset) + centerY);
+                particle.y = (float) (Math.sin(particle.angle) * (mCircleRadius + particle.offset) + centerY);
             } else {
-                particle.y = (float) (centerY - Math.sin(particle.angle) * (280f + particle.offset));
+                particle.y = (float) (centerY - Math.sin(particle.angle) * (mCircleRadius + particle.offset));
             }
-            float randomX =  new Random().nextInt(2) - 1f;
-            float randomY =  new Random().nextInt(2) - 1f;
+            float randomX = new Random().nextInt(2) - 1f;
+            float randomY = new Random().nextInt(2) - 1f;
             particle.x = particle.x + randomX;
             particle.y = particle.y + randomY;
             particle.offset += particle.speed;
         }
+    }
+
+    public int dp2px(float dpValue) {
+        final float scale = getContext().getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 }
