@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_test2).setOnClickListener(view ->
                 startActivity(new Intent(this, MotionActivity.class)));
 
+        findViewById(R.id.btn_test3).setOnClickListener(view ->
+                startActivity(new Intent(this, TestActivity2.class)));
+
         findViewById(R.id.btn).setOnClickListener(view -> {
             if (mLoadingFaceView != null) {
                 mLoadingFaceView.start();

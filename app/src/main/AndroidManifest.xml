@@ -23,6 +23,10 @@
             android:name=".TestActivity1"
             android:label="@string/title_activity_test1" />
 
+        <activity
+            android:name=".TestActivity2"
+            android:label="@string/title_activity_test2" />
+
         <activity android:name=".MotionActivity"
             android:label="@string/title_activity_motion"/>
 

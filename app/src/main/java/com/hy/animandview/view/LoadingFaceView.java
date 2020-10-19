@@ -154,7 +154,6 @@ public class LoadingFaceView extends View {
 
     public void start() {
         mIsReserve = false;
-        clearAnimation();
         cancelAnim();
         startAnim(0, 60);
     }
