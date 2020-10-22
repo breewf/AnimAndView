@@ -92,28 +92,27 @@ public class DragImageView extends androidx.appcompat.widget.AppCompatImageView 
     private void addChildImage() {
         mChildrenList.clear();
         for (int i = 0; i < mChildCount; i++) {
-            ImageView child_i = new ImageView(mContext);
+            ImageView imageView = new ImageView(mContext);
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             layoutParams.width = mWidth;
             layoutParams.height = mHeight;
-            child_i.setLayoutParams(layoutParams);
-            child_i.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            child_i.setTranslationX(mLocation[0]);
-            child_i.setTranslationY(mLocation[1]);
+            imageView.setLayoutParams(layoutParams);
+            imageView.setTranslationX(mLocation[0]);
+            imageView.setTranslationY(mLocation[1]);
             float alpha = i == mChildCount - 1 ? 0.8f : 0.5f / mChildCount * (i + 1);
-            child_i.setAlpha(alpha);
+            imageView.setAlpha(alpha);
 
             Glide.with(this)
                     .load(mImageUrl)
                     .circleCrop()
-                    .into(child_i);
+                    .into(imageView);
 
-            mChildrenList.add(child_i);
+            mChildrenList.add(imageView);
 
             FrameLayout frameLayout = (FrameLayout) getParent();
             if (frameLayout != null) {
-                frameLayout.addView(child_i);
+                frameLayout.addView(imageView);
             }
         }
     }
@@ -152,7 +151,7 @@ public class DragImageView extends androidx.appcompat.widget.AppCompatImageView 
             animate()
                     .translationX(0)
                     .translationY(0)
-                    .setDuration(1000)
+                    .setDuration(600)
                     .setInterpolator(new AnticipateOvershootInterpolator())
                     .setListener(new AnimatorListenerAdapter() {
                         @Override
