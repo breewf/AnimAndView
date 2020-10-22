@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hy.animandview.view.LVCircularSmile
+        android:id="@+id/loading_smile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="60dp" />
+
+    <com.hy.animandview.view.LoadingFaceView
+        android:id="@+id/loading_face_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="start"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="拖动这个头像"
+        android:textColor="@color/black_33"
+        android:textSize="16dp"
+        tools:background="@color/colorAccent" />
+
+    <com.hy.animandview.view.DragImageView
+        android:id="@+id/image_drag"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        tools:background="@color/colorAccent" />
+
+</FrameLayout>

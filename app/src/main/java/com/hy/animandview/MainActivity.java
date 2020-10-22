@@ -3,9 +3,6 @@ package com.hy.animandview;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.hy.animandview.view.LVCircularSmile;
-import com.hy.animandview.view.LoadingFaceView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -14,10 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
  * ClassDesc:MainActivity.
  **/
 public class MainActivity extends AppCompatActivity {
-
-    private LoadingFaceView mLoadingFaceView;
-
-    private LVCircularSmile mLVCircularSmile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +26,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_test3).setOnClickListener(view ->
                 startActivity(new Intent(this, TestActivity2.class)));
 
-        findViewById(R.id.btn).setOnClickListener(view -> {
-            if (mLoadingFaceView != null) {
-                mLoadingFaceView.start();
-            }
-
-            if (mLVCircularSmile != null) {
-                mLVCircularSmile.startAnim();
-            }
-        });
-
-        mLoadingFaceView = findViewById(R.id.loading_face_view);
-        mLVCircularSmile = findViewById(R.id.loading_smile);
+        findViewById(R.id.btn_test4).setOnClickListener(view ->
+                startActivity(new Intent(this, TestActivity4.class)));
 
     }
 }

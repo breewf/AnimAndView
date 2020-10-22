@@ -3,6 +3,7 @@
     package="com.hy.animandview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".App"
@@ -29,6 +30,10 @@
 
         <activity android:name=".MotionActivity"
             android:label="@string/title_activity_motion"/>
+
+        <activity
+            android:name=".TestActivity4"
+            android:label="@string/title_activity_test4" />
 
     </application>
 
