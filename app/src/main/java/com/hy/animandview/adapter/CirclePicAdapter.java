@@ -68,7 +68,15 @@ public class CirclePicAdapter extends BaseMultiItemQuickAdapter<CirclePic, BaseV
 
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
-        Collections.swap(getData(), fromPosition, toPosition);
+        if (fromPosition < toPosition) {
+            for (int i = fromPosition; i < toPosition; i++) {
+                Collections.swap(getData(), i, i + 1);
+            }
+        } else {
+            for (int i = fromPosition; i > toPosition; i--) {
+                Collections.swap(getData(), i, i - 1);
+            }
+        }
         notifyItemMoved(fromPosition, toPosition);
     }
 
