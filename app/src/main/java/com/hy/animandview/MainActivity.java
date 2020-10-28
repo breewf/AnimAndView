@@ -24,10 +24,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, MotionActivity.class)));
 
         findViewById(R.id.btn_test3).setOnClickListener(view ->
-                startActivity(new Intent(this, TestActivity2.class)));
+                startActivity(new Intent(this, TestActivity3.class)));
 
         findViewById(R.id.btn_test4).setOnClickListener(view ->
                 startActivity(new Intent(this, TestActivity4.class)));
+
+        findViewById(R.id.btn_test5).setOnClickListener(view ->
+                startActivity(new Intent(this, TestActivity5.class)));
 
     }
 }

@@ -9,16 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * @author hy
  * @date 2020/10/12
- * desc: TestActivity2
+ * desc: TestActivity3
  **/
-public class TestActivity2 extends AppCompatActivity {
+public class TestActivity3 extends AppCompatActivity {
 
     private ClockView mClockView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test2);
+        setContentView(R.layout.activity_test3);
 
         findViewById(R.id.btn).setOnClickListener(view -> {
             if (mClockView != null) {

@@ -25,8 +25,8 @@
             android:label="@string/title_activity_test1" />
 
         <activity
-            android:name=".TestActivity2"
-            android:label="@string/title_activity_test2" />
+            android:name=".TestActivity3"
+            android:label="@string/title_activity_test3" />
 
         <activity android:name=".MotionActivity"
             android:label="@string/title_activity_motion"/>
@@ -34,6 +34,10 @@
         <activity
             android:name=".TestActivity4"
             android:label="@string/title_activity_test4" />
+
+        <activity
+            android:name=".TestActivity5"
+            android:label="@string/title_activity_test5" />
 
     </application>
 

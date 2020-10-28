@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">AnimAndView</string>
     <string name="title_activity_test1">TestActivity1</string>
-    <string name="title_activity_test2">TestActivity2</string>
     <string name="title_activity_motion">MotionActivity</string>
+    <string name="title_activity_test3">TestActivity3</string>
     <string name="title_activity_test4">TestActivity4</string>
+    <string name="title_activity_test5">TestActivity5</string>
+
+    <string name="str_del">拖动到此处删除</string>
+    <string name="str_release_del">松手手即可删除</string>
 </resources>
