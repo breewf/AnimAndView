@@ -15,13 +15,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9f69f8-0d7c-4fd7-aec9-2edddc2e0999" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingJumpView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/TestActivity6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/bean/GoodsInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/layout/GoodsLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/manage/GoodsShowManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/TestActivity4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/TestActivity4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingSmile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +70,7 @@
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android-custom-view/Users/huxiuwang/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageView.java_SELECTED" value="AppCompatImageView" />
     <property name="android-custom-view/Users/huxiuwang/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/layout/GoodsLayout.java_SELECTED" value="GoodsLayout" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/CircleLineView.java_SELECTED" value="ClockView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/ClockView.java_SELECTED" value="ClockView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DimpleView.java_SELECTED" value="DimpleView" />
@@ -76,9 +81,10 @@
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingjumpView.java_SELECTED" value="LoadingJumpView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="multi-representation-preview/Users/huxiuwang/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/AppCompatImageView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/layout/GoodsLayout.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/CircleLineView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/ClockView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DimpleView.java_selected" value="Custom views" />
@@ -98,15 +104,16 @@
       <recent name="com.hy.animandview" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hy.animandview.view" />
+      <recent name="com.hy.animandview.bean" />
       <recent name="com.hy.animandview" />
+      <recent name="com.hy.animandview.view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/callback" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/listener" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/holder" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/event" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,11 +244,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="494" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1603850154306">
+    <state x="494" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1603965891700">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="494" y="74" key="#com.intellij.ide.util.MemberChooser/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1602560325368" />
-    <state x="494" y="80" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603850154306" />
+    <state x="494" y="80" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603965891700" />
     <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603952836730">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -309,11 +316,11 @@
     </state>
     <state x="396" y="183" key="extract.method.dialog/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1602486871848" />
     <state x="396" y="201" key="extract.method.dialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603867165943" />
-    <state x="306" y="23" width="838" height="1149" key="search.everywhere.popup" timestamp="1603358714567">
+    <state x="306" y="23" width="838" height="1149" key="search.everywhere.popup" timestamp="1603963879812">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="306" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603088647717" />
-    <state x="306" y="23" width="838" height="1149" key="search.everywhere.popup/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603358714567" />
+    <state x="306" y="23" width="838" height="1149" key="search.everywhere.popup/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603963879812" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

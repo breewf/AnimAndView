@@ -32,5 +32,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_test5).setOnClickListener(view ->
                 startActivity(new Intent(this, TestActivity5.class)));
 
+        findViewById(R.id.btn_test6).setOnClickListener(view ->
+                startActivity(new Intent(this, TestActivity6.class)));
+
     }
 }
