@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 /**
- * LoadingView 笑脸
- */
-public class LVCircularSmile extends View {
+ * @author hy
+ * @date 2020/10/29
+ * desc: LoadingSmile
+ **/
+public class LoadingSmile extends View {
 
     private Paint mPaint;
 
@@ -28,15 +30,15 @@ public class LVCircularSmile extends View {
     private ValueAnimator valueAnimator;
     RectF rectF = new RectF();
 
-    public LVCircularSmile(Context context) {
+    public LoadingSmile(Context context) {
         this(context, null);
     }
 
-    public LVCircularSmile(Context context, AttributeSet attrs) {
+    public LoadingSmile(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LVCircularSmile(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LoadingSmile(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
         initPaint();
@@ -85,17 +87,7 @@ public class LVCircularSmile extends View {
         mPaint.setStrokeWidth(dp2px(2));
     }
 
-    /**
-     * 设置颜色
-     *
-     * @param color
-     */
-    public void setViewColor(int color) {
-        mPaint.setColor(color);
-        postInvalidate();
-    }
-
-    private void OnAnimationUpdate(ValueAnimator valueAnimator) {
+    private void onAnimationUpdate(ValueAnimator valueAnimator) {
         mAnimatedValue = (float) valueAnimator.getAnimatedValue();
         if (mAnimatedValue < 0.5) {
             isSmile = false;
@@ -112,17 +104,7 @@ public class LVCircularSmile extends View {
      */
     public void startAnim() {
         stopAnim();
-        startViewAnim(0f, 1f, 1000);
-    }
-
-    /**
-     * 开启动画
-     *
-     * @param time 时间
-     */
-    public void startAnim(int time) {
-        stopAnim();
-        startViewAnim(0f, 1f, time);
+        startViewAnim();
     }
 
     /**
@@ -135,45 +117,30 @@ public class LVCircularSmile extends View {
             valueAnimator.setRepeatCount(0);
             valueAnimator.cancel();
             valueAnimator.end();
-            if (OnStopAnim() == 0) {
-                valueAnimator.setRepeatCount(0);
-                valueAnimator.cancel();
-                valueAnimator.end();
-            }
+
+            isSmile = false;
+            mAnimatedValue = 0f;
+            startAngle = 0f;
         }
     }
 
-    private ValueAnimator startViewAnim(float startF, final float endF, long time) {
+    private void startViewAnim() {
         isAnim = true;
-        valueAnimator = ValueAnimator.ofFloat(startF, endF);
-        valueAnimator.setDuration(time);
+        valueAnimator = ValueAnimator.ofFloat(0f, 1f);
+        valueAnimator.setDuration(1000);
         valueAnimator.setInterpolator(new LinearInterpolator());
 
-        valueAnimator.setRepeatCount(SetAnimRepeatCount());
+        valueAnimator.setRepeatCount(setAnimRepeatCount());
 
-        if (ValueAnimator.RESTART == SetAnimRepeatMode()) {
+        if (ValueAnimator.RESTART == setAnimRepeatMode()) {
             valueAnimator.setRepeatMode(ValueAnimator.RESTART);
-        } else if (ValueAnimator.REVERSE == SetAnimRepeatMode()) {
+        } else if (ValueAnimator.REVERSE == setAnimRepeatMode()) {
             valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
         }
-
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                OnAnimationUpdate(valueAnimator);
-            }
-        });
+        valueAnimator.addUpdateListener(this::onAnimationUpdate);
         if (!valueAnimator.isRunning()) {
             valueAnimator.start();
         }
-        return valueAnimator;
-    }
-
-    private int OnStopAnim() {
-        isSmile = false;
-        mAnimatedValue = 0f;
-        startAngle = 0f;
-        return 0;
     }
 
     public int dp2px(float dpValue) {
@@ -181,11 +148,11 @@ public class LVCircularSmile extends View {
         return (int) (dpValue * scale + 0.5f);
     }
 
-    private int SetAnimRepeatMode() {
+    private int setAnimRepeatMode() {
         return ValueAnimator.RESTART;
     }
 
-    private int SetAnimRepeatCount() {
+    private int setAnimRepeatCount() {
         return ValueAnimator.INFINITE;
     }
 }

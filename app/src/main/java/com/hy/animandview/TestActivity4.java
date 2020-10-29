@@ -1,11 +1,12 @@
 package com.hy.animandview;
 
 import android.os.Bundle;
-import android.widget.FrameLayout;
 
 import com.bumptech.glide.Glide;
 import com.hy.animandview.view.DragImageView;
-import com.hy.animandview.view.LVCircularSmile;
+import com.hy.animandview.view.LoadingJumpView;
+import com.hy.animandview.view.LoadingSmile;
+import com.hy.animandview.view.LoadingCircleView;
 import com.hy.animandview.view.LoadingFaceView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,30 +18,40 @@ import androidx.appcompat.app.AppCompatActivity;
  **/
 public class TestActivity4 extends AppCompatActivity {
 
-    private FrameLayout mRootLayout;
     private DragImageView mDragImageView;
 
+    private LoadingCircleView mLoadingCircleView;
+    private LoadingJumpView mLoadingJumpView;
     private LoadingFaceView mLoadingFaceView;
 
-    private LVCircularSmile mLVCircularSmile;
+    private LoadingSmile mLoadingSmile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test4);
 
-        mRootLayout = findViewById(R.id.root_layout);
         mDragImageView = findViewById(R.id.image_drag);
+        mLoadingCircleView = findViewById(R.id.loading_circle_view);
+        mLoadingJumpView = findViewById(R.id.loading_jump_view);
         mLoadingFaceView = findViewById(R.id.loading_face_view);
-        mLVCircularSmile = findViewById(R.id.loading_smile);
+        mLoadingSmile = findViewById(R.id.loading_smile);
 
         findViewById(R.id.btn).setOnClickListener(view -> {
             if (mLoadingFaceView != null) {
                 mLoadingFaceView.start();
             }
 
-            if (mLVCircularSmile != null) {
-                mLVCircularSmile.startAnim();
+            if (mLoadingSmile != null) {
+                mLoadingSmile.startAnim();
+            }
+
+            if (mLoadingCircleView != null) {
+                mLoadingCircleView.start();
+            }
+
+            if (mLoadingJumpView != null) {
+                mLoadingJumpView.start();
             }
         });
 

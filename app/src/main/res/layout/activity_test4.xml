@@ -6,12 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hy.animandview.view.LVCircularSmile
+    <com.hy.animandview.view.LoadingCircleView
+        android:id="@+id/loading_circle_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:visibility="visible" />
+
+    <com.hy.animandview.view.LoadingJumpView
+        android:id="@+id/loading_jump_view"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="160dp"
+        android:visibility="visible" />
+
+    <com.hy.animandview.view.LoadingSmile
         android:id="@+id/loading_smile"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="60dp" />
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp" />
 
     <com.hy.animandview.view.LoadingFaceView
         android:id="@+id/loading_face_view"
@@ -19,6 +38,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
         android:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton

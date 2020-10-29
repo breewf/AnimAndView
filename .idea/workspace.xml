@@ -15,9 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9f69f8-0d7c-4fd7-aec9-2edddc2e0999" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingJumpView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/adapter/CirclePicAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/adapter/CirclePicAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/TestActivity4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/TestActivity4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/view/LoadingSmile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test4.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,9 @@
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DimpleView.java_SELECTED" value="DimpleView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DragImageView.java_SELECTED" value="DragImageView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java_SELECTED" value="LVCircularSmile" />
+    <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java_SELECTED" value="LoadingCircleView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingFaceView.java_SELECTED" value="LoadingFaceView" />
+    <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingjumpView.java_SELECTED" value="LoadingJumpView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
@@ -78,19 +84,21 @@
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DimpleView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/DragImageView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingFaceView.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingjumpView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="android.template.595282290">
       <recent name="com.hy.animandview" />
-      <recent name="com.hy.animandview.view" />
     </key>
     <key name="android.template.574314565">
       <recent name="com.hy.animandview" />
     </key>
-    <key name="android.template.595282290">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hy.animandview.view" />
       <recent name="com.hy.animandview" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -234,11 +242,11 @@
     </state>
     <state x="494" y="74" key="#com.intellij.ide.util.MemberChooser/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1602560325368" />
     <state x="494" y="80" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603850154306" />
-    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603854133565">
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603952836730">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="299" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603079175494" />
-    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603854133565" />
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603952836730" />
     <state x="536" y="200" key="AndroidCreateXmlResourceDialog" timestamp="1603853738793">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -248,26 +256,26 @@
     </state>
     <state x="575" y="204" key="AndroidProcessChooserDialog/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603090386657" />
     <state x="575" y="224" key="AndroidProcessChooserDialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603867027793" />
-    <state width="1388" height="379" key="GridCell.Tab.0.bottom" timestamp="1603868715454">
+    <state width="1388" height="207" key="GridCell.Tab.0.bottom" timestamp="1603953665191">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.bottom/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875719" />
-    <state width="1388" height="379" key="GridCell.Tab.0.bottom/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603868715454" />
-    <state width="1388" height="379" key="GridCell.Tab.0.center" timestamp="1603868715453">
+    <state width="1388" height="207" key="GridCell.Tab.0.bottom/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603953665191" />
+    <state width="1388" height="207" key="GridCell.Tab.0.center" timestamp="1603953665190">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.center/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875718" />
-    <state width="1388" height="379" key="GridCell.Tab.0.center/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603868715453" />
-    <state width="1388" height="379" key="GridCell.Tab.0.left" timestamp="1603868715452">
+    <state width="1388" height="207" key="GridCell.Tab.0.center/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603953665190" />
+    <state width="1388" height="207" key="GridCell.Tab.0.left" timestamp="1603953665189">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.left/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875717" />
-    <state width="1388" height="379" key="GridCell.Tab.0.left/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603868715452" />
-    <state width="1388" height="379" key="GridCell.Tab.0.right" timestamp="1603868715453">
+    <state width="1388" height="207" key="GridCell.Tab.0.left/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603953665189" />
+    <state width="1388" height="207" key="GridCell.Tab.0.right" timestamp="1603953665190">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.right/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875718" />
-    <state width="1388" height="379" key="GridCell.Tab.0.right/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603868715453" />
+    <state width="1388" height="207" key="GridCell.Tab.0.right/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603953665190" />
     <state width="1388" height="259" key="GridCell.Tab.1.bottom" timestamp="1603867053976">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
