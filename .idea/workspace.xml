@@ -15,7 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9f69f8-0d7c-4fd7-aec9-2edddc2e0999" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/manage/GoodsShowManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hy/animandview/manage/GoodsShowManage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +70,7 @@
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java_SELECTED" value="LVCircularSmile" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java_SELECTED" value="LoadingCircleView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingFaceView.java_SELECTED" value="LoadingFaceView" />
+    <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingJumpView.java_SELECTED" value="LoadingJumpView" />
     <property name="android-custom-view/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingjumpView.java_SELECTED" value="LoadingJumpView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="extract.method.default.visibility" value="private" />
@@ -82,6 +85,7 @@
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LVCircularSmile.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingCircleView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingFaceView.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingJumpView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/huxiuwang/AndroidProjectsGithub/AnimAndView/app/src/main/java/com/hy/animandview/view/LoadingjumpView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -253,26 +257,26 @@
     </state>
     <state x="575" y="204" key="AndroidProcessChooserDialog/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603090386657" />
     <state x="575" y="224" key="AndroidProcessChooserDialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604043733513" />
-    <state width="1388" height="409" key="GridCell.Tab.0.bottom" timestamp="1604046047385">
+    <state width="1388" height="409" key="GridCell.Tab.0.bottom" timestamp="1604054635217">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.bottom/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875719" />
-    <state width="1388" height="409" key="GridCell.Tab.0.bottom/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604046047385" />
-    <state width="1388" height="409" key="GridCell.Tab.0.center" timestamp="1604046047384">
+    <state width="1388" height="409" key="GridCell.Tab.0.bottom/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604054635217" />
+    <state width="1388" height="409" key="GridCell.Tab.0.center" timestamp="1604054635216">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.center/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875718" />
-    <state width="1388" height="409" key="GridCell.Tab.0.center/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604046047384" />
-    <state width="1388" height="409" key="GridCell.Tab.0.left" timestamp="1604046047383">
+    <state width="1388" height="409" key="GridCell.Tab.0.center/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604054635216" />
+    <state width="1388" height="409" key="GridCell.Tab.0.left" timestamp="1604054635216">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.left/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875717" />
-    <state width="1388" height="409" key="GridCell.Tab.0.left/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604046047383" />
-    <state width="1388" height="409" key="GridCell.Tab.0.right" timestamp="1604046047384">
+    <state width="1388" height="409" key="GridCell.Tab.0.left/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604054635216" />
+    <state width="1388" height="409" key="GridCell.Tab.0.right" timestamp="1604054635217">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1388" height="323" key="GridCell.Tab.0.right/0.23.1440.788/-470.-1417.2560.1417@0.23.1440.788" timestamp="1603091875718" />
-    <state width="1388" height="409" key="GridCell.Tab.0.right/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604046047384" />
+    <state width="1388" height="409" key="GridCell.Tab.0.right/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604054635217" />
     <state width="1388" height="259" key="GridCell.Tab.1.bottom" timestamp="1604043761806">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -297,6 +301,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="532" y="382" key="ReplaceDuplicatesPrompt/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1603867167162" />
+    <state x="419" y="103" key="RollbackChangesDialog" timestamp="1604055084719">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="419" y="103" key="RollbackChangesDialog/0.23.1440.877/-470.-1417.2560.1417@0.23.1440.877" timestamp="1604055084719" />
     <state x="126" y="23" key="SettingsEditor" timestamp="1602468950608">
       <screen x="0" y="23" width="1440" height="788" />
     </state>

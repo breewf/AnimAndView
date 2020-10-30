@@ -191,7 +191,7 @@ public class GoodsShowManage {
 
             // 前2个以中心点翻转宽度的一半
             if (i < 2) {
-                // 以中心点翻转
+                // 翻转中心点
                 view.setPivotX(view.getWidth() / 2f);
                 view.setPivotY(view.getHeight() / 2f);
 
@@ -208,7 +208,7 @@ public class GoodsShowManage {
                 scaleX = 1.0f;
                 scaleY = 1.0f;
                 rotationY = 0f;
-                alpha = 1f;
+                alpha = 1.0f;
             } else {
                 // 最后两个
                 toTransX = mGoodsLocations.get(i - 2).transX;
@@ -250,6 +250,7 @@ public class GoodsShowManage {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
+                            view.animate().setListener(null);
                             view.setAlpha(1f);
                             view.setScaleX(1f);
                             view.setScaleY(1f);
