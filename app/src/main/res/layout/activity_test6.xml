@@ -10,8 +10,18 @@
     <com.hy.animandview.layout.GoodsLayout
         android:id="@+id/goods_layout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         android:background="@color/colorAccent"
         tools:background="@color/colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:text="start"
+        android:textSize="16dp" />
 
 </FrameLayout>

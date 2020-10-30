@@ -24,4 +24,12 @@ public class GoodsInfo extends BaseModel {
         this.desc = desc;
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "GoodsInfo{" +
+                "goodsId=" + goodsId +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
