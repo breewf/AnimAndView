@@ -117,7 +117,6 @@ public class GoodsShowManage {
         for (int i = 0; i < NUM_ALL; i++) {
             GoodsInfo goodsInfo = mDataList.get(i);
 
-            // 用掉后删除view
             View view = mViewList.get(i);
 
             ImageView imageViewBg = view.findViewById(R.id.bg);
@@ -140,9 +139,10 @@ public class GoodsShowManage {
             boolean isCenter = quotient == 1 || quotient == 2;
 
             if (quotient != 4) {
+                // 前面8个默认可见
                 view.setVisibility(View.VISIBLE);
             } else {
-                // 最后两个不可见
+                // 最后2个默认不可见--动画开始才可见
                 view.setVisibility(View.INVISIBLE);
             }
 
