@@ -12,7 +12,6 @@ public class GoodsLocation extends BaseModel {
     public float transY;
     public float scaleX;
     public float scaleY;
-    public float transZ;
     public float rotationY;
 
     public GoodsLocation() {

@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -59,6 +60,7 @@ public class GoodsShowManage {
     private final List<GoodsLocation> mGoodsLocations = new ArrayList<>();
 
     private boolean mIsAnim;
+    private boolean mIsDownTouch;
 
     public GoodsShowManage(Context context) {
         mContext = context;
@@ -81,6 +83,30 @@ public class GoodsShowManage {
         initViewList();
 
         addViewList();
+
+        if (mGoodsLayout != null) {
+            mGoodsLayout.setTouchListener(new GoodsLayout.TouchListener() {
+                @Override
+                public void down(boolean isDown) {
+                    if (isDown) {
+                        mIsDownTouch = true;
+                        // 按下--停止自动滚动
+                    } else {
+                        mIsDownTouch = false;
+                        // 松手--开始自动滚动
+                        checkAutoStartAnim();
+                    }
+                }
+
+                @Override
+                public void touch(float moveX) {
+//                    if (moveX == 0) {
+//                        return;
+//                    }
+//                    touchMoveX(moveX);
+                }
+            });
+        }
     }
 
     @SuppressLint("InflateParams")
@@ -174,6 +200,9 @@ public class GoodsShowManage {
         if (ObjectUtils.isEmpty(mGoodsLocations)) {
             return;
         }
+        if (mViewList.size() != mGoodsLocations.size()) {
+            return;
+        }
 
         for (int i = 0; i < mViewList.size(); i++) {
             View view = mViewList.get(i);
@@ -261,6 +290,7 @@ public class GoodsShowManage {
                             location.transY = toTransY;
                             location.scaleX = scaleX;
                             location.scaleY = scaleY;
+                            location.rotationY = rotationY;
 
                             if (finalI < 2) {
                                 view.setVisibility(View.INVISIBLE);
@@ -294,14 +324,75 @@ public class GoodsShowManage {
 
                                 mIsAnim = false;
 
-                                App.getMainHandler().postDelayed(() -> {
-                                    // 重复播放
-                                    startAnim();
-                                }, 1000);
+                                checkAutoStartAnim();
                             }
                         }
                     })
                     .start();
         }
+    }
+
+    private void touchMoveX(float moveX) {
+        if (ObjectUtils.isEmpty(mViewList)) {
+            return;
+        }
+        if (ObjectUtils.isEmpty(mGoodsLocations)) {
+            return;
+        }
+        if (mViewList.size() != mGoodsLocations.size()) {
+            return;
+        }
+        if (moveX < 0) {
+            // 向左滑动
+        } else {
+            // 向右滑动
+        }
+
+        float x = moveX / 2f;
+        float onceX = mViewWidth + mSpace;
+
+        // 滑动边界
+        if (Math.abs(x) > onceX) {
+            return;
+        }
+
+        float scale = Math.abs(x) / mViewWidth;
+        scale = Math.max(scale, 0f);
+        scale = Math.min(scale, 1f);
+
+        Log.i(TAG, "touchMoveX----x:" + x
+                + " onceX:" + onceX
+                + " scale:" + scale);
+
+        float changeTransY = 0f;
+
+        for (int i = 0; i < mViewList.size(); i++) {
+            View view = mViewList.get(i);
+            GoodsLocation location = mGoodsLocations.get(i);
+
+            if (i < 2) {
+                changeTransY = 0f;
+            } else if (i < 4) {
+                changeTransY = -mSpace * 2 * scale;
+            } else if (i < 6) {
+                changeTransY = 0f;
+            } else if (i < 8) {
+                changeTransY = mSpace * 2 * scale;
+            } else {
+                changeTransY = 0f;
+            }
+
+            view.setTranslationX(location.transX + x);
+            view.setTranslationY(location.transY + changeTransY);
+        }
+    }
+
+    private void checkAutoStartAnim() {
+        App.getMainHandler().postDelayed(() -> {
+            // 重复播放
+            if (!mIsDownTouch) {
+                startAnim();
+            }
+        }, 1000);
     }
 }
